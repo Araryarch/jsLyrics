@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "liricle": "^4.2.0"
+    "liricle": "^4.2.0",
+    "typewriter-effect": "^2.21.0"
   }
 }

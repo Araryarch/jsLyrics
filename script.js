@@ -1,10 +1,12 @@
+import Typewriter from 'typewriter-effect'
+
 const $audio = document.querySelector(".audio");
 const $lyric_word = document.querySelector(".lyric-word");
 
 const liricle = new Liricle();
 const typewriter = new Typewriter($lyric_word, {
   loop: false,
-  delay: 50,
+  delay: 50
 });
 
 let currentLineIndex = 0;
