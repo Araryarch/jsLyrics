@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  perspective: 1000px;
+  text-align: center;
+}
+
+.audio {
+  margin-bottom: 20px;
+  transform: rotateY(10deg);
+  transition: transform 0.3s ease;
+}
+
+.audio:hover {
+  transform: rotateY(0deg);
+}
+
+.lyric-word {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  transform: translateZ(30px);
+  animation: float 3s ease-in-out infinite;
+}
+
+.lyric-line {
+  font-size: 20px;
+  padding: 5px;
+  margin: 5px 0;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: perspective(800px) rotateX(0deg) translateZ(20px);
+}
+
+.lyric-line.active {
+  opacity: 1;
+  font-weight: bold;
+  color: salmon;
+  transform: perspective(800px) rotateX(10deg) translateZ(30px);
+}
+
+@keyframes float {
+  0% {
+    transform: translateZ(30px);
+  }
+  50% {
+    transform: translateZ(40px);
+  }
+  100% {
+    transform: translateZ(30px);
+  }
+}
