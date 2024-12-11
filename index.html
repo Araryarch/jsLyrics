@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <audio class="audio" controls>
+    <audio id="audio" class="audio">
       <source src="./audio/blue.mp3" type="audio/mp3" />
     </audio>
     <div class="lyric-word"></div>
@@ -15,5 +15,14 @@
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="./node_modules/liricle/dist/liricle.js"></script>
     <script src="script.js"></script>
+     <script>
+      const audio = document.getElementById('audio');
+
+      document.body.addEventListener('click', () => {
+        if (audio.paused) {
+          audio.play();
+        }
+      });
+    </script>
   </body>
 </html>
