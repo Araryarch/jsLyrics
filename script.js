@@ -1,5 +1,3 @@
-import Typewriter from 'typewriter-effect'
-
 const $audio = document.querySelector(".audio");
 const $lyric_word = document.querySelector(".lyric-word");
 
